@@ -1,0 +1,18 @@
+[package]
+name = "qcom-fw"
+version.workspace = true
+edition.workspace = true
+# Ported from the MIT-licensed ablfvextractor crate (same author); see src/lib.rs.
+license = "MIT"
+rust-version.workspace = true
+description = "Qualcomm firmware image probes: ABL LinuxLoader extraction and xbl_config anti-rollback"
+
+[[bin]]
+name = "qcom-arb"
+path = "src/bin/qcom-arb.rs"
+
+[dependencies]
+lzma-rs = "0.3"
+
+[lints]
+workspace = true

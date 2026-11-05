@@ -1,0 +1,13 @@
+[package]
+name = "abl-key"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license = "MIT"
+
+[dependencies]
+qcom-fw = { path = "../fw" }
+avb-meta = { path = "../../../shared/avb-meta", default-features = false }
+
+[lints]
+workspace = true
