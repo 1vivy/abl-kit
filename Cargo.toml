@@ -1,0 +1,18 @@
+[workspace]
+resolver = "3"
+members = [
+    "crates/abl-extract",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95"
+license = "Apache-2.0"
+
+[workspace.dependencies]
+lzma-rs = "0.3.0"
+sha2 = { version = "0.10.9", default-features = false }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
