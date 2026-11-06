@@ -4,7 +4,7 @@ version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
 license.workspace = true
-description = "Qualcomm ABL AVB key discovery, first-key anchor, raw RSA-2048 scan and ABL trust conventions"
+description = "Qualcomm ABL AVB key discovery, first-key anchor, raw RSA-2048 scan, SET_VBH reconstruction and ABL trust conventions"
 
 [dependencies]
 avb-chain = { git = "https://github.com/1vivy/avb-kit", rev = "12b3c869796dd6629024dde4a7f06acee9de5cfd" }

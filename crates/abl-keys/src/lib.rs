@@ -29,8 +29,10 @@ use avb_format::{key_is_valid, validate_key_blob};
 pub use avb_verify::{sha256, sha512, sha512_concat};
 
 pub mod plan;
+pub mod vbh;
 
 pub use plan::{AblAccepted, AblPlan, AblRejected, AblVerdict, Properties, identity_ok};
+pub use vbh::{VbmetaReader, derive_set_vbh};
 
 /// The `com.android.build.boot.*` property the observed canoe ABL prefers over
 /// the boot header (`evidence/emu-report.md` section 5).

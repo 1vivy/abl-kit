@@ -10,7 +10,7 @@ License: Apache-2.0. The libraries are `no_std`. Only the CLI uses `std`.
 | Crate | Runtime | Dependencies | Purpose |
 |---|---|---|---|
 | `abl-extract` | `std` | `lzma-rs` | Find the LinuxLoader PE in an `abl` firmware container |
-| `abl-keys` | `no_std` + `alloc` | `avb-format`, `avb-verify`, `avb-chain` | Scan a LinuxLoader PE for AVB public keys, keep file order, select the first key as the stock anchor, scan for raw RSA-2048 moduli, and hold the ABL plan conventions |
+| `abl-keys` | `no_std` + `alloc` | `avb-format`, `avb-verify`, `avb-chain` | Scan a LinuxLoader PE for AVB public keys, keep file order, select the first key as the stock anchor, scan for raw RSA-2048 moduli, rebuild the `SET_VBH` digest from source partitions, and hold the ABL plan conventions |
 | `tools/ablkit` | `std` | the crates above | Host CLI |
 
 ## Tool
@@ -36,7 +36,9 @@ device.
 - A later key is reported but is not trusted. A caller that trusts it says so
   explicitly.
 - The fixed SHA-256 metadata digest that the ABL stores as its VBH belongs to
-  the ABL convention layer, not to `avb-chain`.
+  the ABL convention layer, not to `avb-chain`. `abl-keys::vbh::derive_set_vbh`
+  rebuilds it from the source partitions and accepts the result only when it
+  equals the digest the platform verified.
 - See `docs/anchor.md` for the source references and the limits.
 
 ## Out of scope

@@ -40,5 +40,13 @@ The stock Qualcomm source references are:
 - `Library/avb/VerifiedBoot.c` `ComputeVbMetaDigest` is the SHA-256 ABL/TEE VBH
   over the ordered metadata images.
 
+`crates/abl-keys/src/vbh.rs` rebuilds that VBH from the source partitions. The
+chain order and the digest come from `avb-chain` (`Plan::new_unverified`,
+`Plan::supply_from` and `Plan::vbmeta_digest_with`). This crate adds the stock
+decision: the caller's independently verified digest is the only proof, and a
+signature verdict does not admit an image. The slot loop follows libavb: it
+tries the unsuffixed, `_a` and `_b` slots, uses `boot` when `vbmeta` is absent,
+and removes the suffix for a chain descriptor with `DO_NOT_USE_AB`.
+
 `OEMPublicKey` is the fixed first key in the stock image. A later structurally
 valid key is reported but is not the anchor.
