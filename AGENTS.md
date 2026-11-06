@@ -18,8 +18,8 @@ This repository holds Qualcomm stock-ABL conventions. Read `README.md` and
 ## Crates
 
 - `abl-extract` is `std` and bounded. It never returns a partial loader.
-- `abl-keys` is `no_std + alloc`. It depends on avb-kit by path until avb-kit
-  has a remote. Then the dependency becomes a git dependency.
+- `abl-keys` is `no_std + alloc`. It depends on avb-kit through a git
+  dependency at a pinned revision.
 - The scan reports offsets and keeps file order. Do not sort a key list.
 - Trust is explicit. A later key is reported, not trusted.
 

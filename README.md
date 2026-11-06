@@ -1,7 +1,7 @@
 # abl-kit
 
 Reusable Rust code for Qualcomm stock-ABL conventions. AVB itself is not here.
-The AOSP AVB format comes from [`avb-kit`](../avb-kit).
+The AOSP AVB format comes from [`avb-kit`](https://github.com/1vivy/avb-kit).
 
 License: Apache-2.0. The libraries are `no_std`. Only the CLI uses `std`.
 

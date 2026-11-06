@@ -63,5 +63,5 @@ metadata uses `avb-verify`.
 
 ## License
 
-Every crate declares Apache-2.0. The avb-kit dependency is a path dependency
-until avb-kit has a remote. Then it becomes a git dependency.
+Every crate declares Apache-2.0. avb-kit is a git dependency at a pinned
+revision.

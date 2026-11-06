@@ -7,9 +7,9 @@ license.workspace = true
 description = "Qualcomm ABL AVB key discovery, first-key anchor, raw RSA-2048 scan and ABL trust conventions"
 
 [dependencies]
-avb-chain = { path = "../../../avb-kit/crates/avb-chain" }
-avb-format = { path = "../../../avb-kit/crates/avb-format" }
-avb-verify = { path = "../../../avb-kit/crates/avb-verify" }
+avb-chain = { git = "https://github.com/1vivy/avb-kit", rev = "9b483f5fa93947753ef24a09499fbbfdf42009ba" }
+avb-format = { git = "https://github.com/1vivy/avb-kit", rev = "9b483f5fa93947753ef24a09499fbbfdf42009ba" }
+avb-verify = { git = "https://github.com/1vivy/avb-kit", rev = "9b483f5fa93947753ef24a09499fbbfdf42009ba" }
 
 [lints]
 workspace = true
