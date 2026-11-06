@@ -1,13 +1,15 @@
 [package]
-name = "abl-key"
+name = "ablkit"
 version.workspace = true
 edition.workspace = true
 rust-version.workspace = true
-license = "MIT"
+license.workspace = true
+description = "Qualcomm ABL LinuxLoader extraction and AVB anchor-key inspection"
 
 [dependencies]
-qcom-fw = { path = "../fw" }
-avb-meta = { path = "../../../shared/avb-meta", default-features = false }
+abl-extract = { path = "../../crates/abl-extract" }
+abl-keys = { path = "../../crates/abl-keys" }
+sha2 = "0.10"
 
 [lints]
 workspace = true
