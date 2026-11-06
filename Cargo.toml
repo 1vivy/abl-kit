@@ -2,6 +2,7 @@
 resolver = "3"
 members = [
     "crates/abl-extract",
+    "crates/abl-keys",
 ]
 
 [workspace.package]

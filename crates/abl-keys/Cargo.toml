@@ -1,0 +1,15 @@
+[package]
+name = "abl-keys"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+description = "Qualcomm ABL AVB key discovery, first-key anchor, raw RSA-2048 scan and ABL trust conventions"
+
+[dependencies]
+avb-chain = { path = "../../../avb-kit/crates/avb-chain" }
+avb-format = { path = "../../../avb-kit/crates/avb-format" }
+avb-verify = { path = "../../../avb-kit/crates/avb-verify" }
+
+[lints]
+workspace = true
