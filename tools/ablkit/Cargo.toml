@@ -9,7 +9,7 @@ description = "Qualcomm ABL LinuxLoader extraction and AVB anchor-key inspection
 [dependencies]
 abl-extract = { path = "../../crates/abl-extract" }
 abl-keys = { path = "../../crates/abl-keys" }
-sha2 = "0.10"
+sha2.workspace = true
 
 [lints]
 workspace = true

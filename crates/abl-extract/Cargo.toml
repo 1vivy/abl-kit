@@ -7,7 +7,7 @@ license.workspace = true
 description = "Bounded extraction of the LinuxLoader PE from a Qualcomm ABL image"
 
 [dependencies]
-lzma-rs = "0.3"
+lzma-rs.workspace = true
 
 [lints]
 workspace = true
