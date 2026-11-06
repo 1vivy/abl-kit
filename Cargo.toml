@@ -18,10 +18,3 @@ sha2 = { version = "0.10.9", default-features = false }
 
 [workspace.lints.rust]
 unsafe_code = "forbid"
-
-# TEMPORARY w2-vbh: the published avb-kit revision drops the chain descriptor
-# flags. Replace this patch with the pushed revision before merge.
-[patch."https://github.com/1vivy/avb-kit"]
-avb-chain = { path = "../avb-kit-w2/crates/avb-chain" }
-avb-format = { path = "../avb-kit-w2/crates/avb-format" }
-avb-verify = { path = "../avb-kit-w2/crates/avb-verify" }
