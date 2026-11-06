@@ -30,7 +30,7 @@ dependencies = [
 [[package]]
 name = "avb-chain"
 version = "0.1.0"
-source = "git+https://github.com/1vivy/avb-kit?rev=9b483f5fa93947753ef24a09499fbbfdf42009ba#9b483f5fa93947753ef24a09499fbbfdf42009ba"
+source = "git+https://github.com/1vivy/avb-kit?rev=12b3c869796dd6629024dde4a7f06acee9de5cfd#12b3c869796dd6629024dde4a7f06acee9de5cfd"
 dependencies = [
  "avb-format",
  "avb-verify",
@@ -39,12 +39,12 @@ dependencies = [
 [[package]]
 name = "avb-format"
 version = "0.1.0"
-source = "git+https://github.com/1vivy/avb-kit?rev=9b483f5fa93947753ef24a09499fbbfdf42009ba#9b483f5fa93947753ef24a09499fbbfdf42009ba"
+source = "git+https://github.com/1vivy/avb-kit?rev=12b3c869796dd6629024dde4a7f06acee9de5cfd#12b3c869796dd6629024dde4a7f06acee9de5cfd"
 
 [[package]]
 name = "avb-verify"
 version = "0.1.0"
-source = "git+https://github.com/1vivy/avb-kit?rev=9b483f5fa93947753ef24a09499fbbfdf42009ba#9b483f5fa93947753ef24a09499fbbfdf42009ba"
+source = "git+https://github.com/1vivy/avb-kit?rev=12b3c869796dd6629024dde4a7f06acee9de5cfd#12b3c869796dd6629024dde4a7f06acee9de5cfd"
 dependencies = [
  "avb-format",
  "sha2",
